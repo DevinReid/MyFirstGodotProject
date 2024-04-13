@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://cffpl7h10b088"]
+[gd_scene load_steps=10 format=3 uid="uid://cffpl7h10b088"]
 
 [ext_resource type="Texture2D" uid="uid://cwl1b1sud3gkp" path="res://art/enemyFlyingAlt_1.png" id="1_tfnn6"]
+[ext_resource type="Script" path="res://mob.gd" id="1_wj4cp"]
 [ext_resource type="Texture2D" uid="uid://dkvy18ih6w3tu" path="res://art/enemyFlyingAlt_2.png" id="2_hyttl"]
 [ext_resource type="Texture2D" uid="uid://cfi2786uvmytf" path="res://art/enemySwimming_1.png" id="3_joot3"]
 [ext_resource type="Texture2D" uid="uid://ba8nnos16rjnd" path="res://art/enemySwimming_2.png" id="4_xtxxl"]
@@ -8,8 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://bvxhkr503h0ds" path="res://art/enemyWalking_2.png" id="6_d2jt8"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_36mrn"]
-radius = 56.0
-height = 112.0
+radius = 36.0
+height = 106.0
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_yyto1"]
 animations = [{
@@ -51,6 +52,7 @@ animations = [{
 position = Vector2(-12, 1)
 collision_mask = 0
 gravity_scale = 0.0
+script = ExtResource("1_wj4cp")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -61,6 +63,5 @@ shape = SubResource("CapsuleShape2D_36mrn")
 scale = Vector2(0.75, 0.75)
 sprite_frames = SubResource("SpriteFrames_yyto1")
 animation = &"fly"
-frame_progress = 0.266511
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="."]
